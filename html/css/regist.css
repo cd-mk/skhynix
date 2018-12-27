@@ -1,0 +1,9 @@
+@charset "utf-8";
+#header {height:80px;max-width:1240px;}
+#header h1 {padding-top:14px;}
+#header .gnb li {display: inline-block;margin-left:45px;}
+#header .gnb  li a {color:#353535;font-size: 18px;font-weight:700;}
+#header .lnb {display: inline-block;margin-left:60px;}
+#header .lnb li {display: inline-block;color:#8c8a8a;}
+#header .lnb li a {color:#8c8a8a;font-size: 16px;font-weight:700;}
+#header .lnb li:last-child::before {content:''; clear:both;display:block;width:2px;  height:14px;background: #a7a5a5;margin:0 12px;}
