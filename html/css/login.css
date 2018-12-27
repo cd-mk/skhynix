@@ -1,2 +1,66 @@
 @charset "utf-8";
 
+.login-wrap {
+  position: relative;
+  height: 850px;
+  background: url(../images/bg-login.jpg) no-repeat 0 0;
+}
+.login-wrap .login-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 101px;
+  padding: 32px 0 0 376px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+.login-wrap .login-box::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.login-box .login-input,
+.login-box .login-sns {
+  float: left;
+}
+.login-box .login-input::after,
+.login-box .login-sns::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.login-box .login-input .input-user {
+  float: left;
+  width: 191px;
+  height: 32px;
+  padding: 9px 13px;
+  border: 1px solid #ccc;
+  color: #757575;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+.login-box .login-input .input-user.pw {
+  margin-left: 7px;
+}
+.login-box .login-input .btn-login {
+  float: left;
+  width: 150px;
+  height: 32px;
+  margin-left: 7px;
+  line-height: 32px;
+  font-size: 12px;
+  text-align: center;
+  background: #a87161;
+  color: #fff;
+}
+.login-box .login-sns {
+  margin-left: 69px;
+}
+.login-box .login-sns .btn-sns {
+  float: left;
+  margin-left: 10px;
+}
+.login-box .login-sns .btn-sns:first-child {
+  margin-left: 0;
+}
