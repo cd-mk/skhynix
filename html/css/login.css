@@ -2,65 +2,109 @@
 
 .login-wrap {
   position: relative;
-  height: 850px;
+  height: 770px;
   background: url(../images/bg-login.jpg) no-repeat 0 0;
 }
 .login-wrap .login-box {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 101px;
-  padding: 32px 0 0 376px;
-  background: rgba(0, 0, 0, 0.5);
+  top: 346px;
+  left: 956px;
+  width: 577px;
+  height: 365px;
+  padding: 28px 37px 24px;
+  background: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
 }
-.login-wrap .login-box::after {
+.login-box .user-login {
+  position: relative;
+}
+.login-box .user-login::after {
   content: '';
   display: table;
   clear: both;
 }
-.login-box .login-input,
-.login-box .login-sns {
-  float: left;
-}
-.login-box .login-input::after,
-.login-box .login-sns::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.login-box .login-input .input-user {
-  float: left;
-  width: 191px;
-  height: 32px;
-  padding: 9px 13px;
-  border: 1px solid #ccc;
-  color: #757575;
+.user-login .input-wrap .input-user {
+  width: 350px;
+  height: 45px;
+  padding: 16px 18px;
+  border: 0;
   box-sizing: border-box;
-  font-size: 12px;
+  color: #7c7c7c;
+  font-size: 14px;
 }
-.login-box .login-input .input-user.pw {
-  margin-left: 7px;
+.user-login .input-wrap .input-user:first-child {
+  margin-bottom: 8px;
 }
-.login-box .login-input .btn-login {
-  float: left;
-  width: 150px;
-  height: 32px;
-  margin-left: 7px;
-  line-height: 32px;
-  font-size: 12px;
-  text-align: center;
-  background: #a87161;
+.user-login .btn-login {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 143px;
+  height: 98px;
+  background: #202020;
   color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 98px;
+}
+.login-box .lost-wrap {
+  margin-top: 11px;
+  text-align: right;
+}
+.login-box .lost-wrap a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
 }
 .login-box .login-sns {
-  margin-left: 69px;
+  overflow: hidden;
+  margin-top: 24px;
 }
-.login-box .login-sns .btn-sns {
+.login-box .login-sns > li {
   float: left;
-  margin-left: 10px;
+  width: 249px;
 }
-.login-box .login-sns .btn-sns:first-child {
-  margin-left: 0;
+.login-box .login-sns > li:nth-child(3),
+.login-box .login-sns > li:nth-child(4) {
+  margin-top: 3px;
+}
+.login-box .login-sns > li:nth-child(even) {
+  margin-left: 3px;
+}
+.login-box .login-sns > li .btn-sns {
+  position: relative;
+  display: block;
+  padding: 26px 17px 26px 70px;
+  background: #fff;
+  color: #353535;
+  font-size: 14px;
+  font-weight: 700;
+}
+.login-box .login-sns > li .btn-sns::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 15px;
+  width: 38px;
+  height: 38px;
+  background-image: url(../images/ico-sns.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.login-box .login-sns > li .btn-sns.ko::before {
+  background-position: -38px 0;
+}
+.login-box .login-sns > li .btn-sns.fb::before {
+  background-position: -76px 0;
+}
+.login-box .login-sns > li .btn-sns.gl::before {
+  background-position: -114px 0;
+}
+.login-box .login-notice {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-align: right;
 }
