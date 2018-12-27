@@ -160,6 +160,7 @@ ul.alt li:first-child {
 #header .gnb {display: inline-block;}
 #header .gnb li {display: inline-block;margin-left:45px;}
 #header .gnb  li a {color:#353535;font-size: 18px;font-weight:700;}
+#header .gnb  li.on a {color:#e31837;}
 #header .lnb {display: inline-block;margin-left:60px;}
 #header .lnb li {display: inline-block;color:#8c8a8a;}
 #header .lnb li a {color:#8c8a8a;font-size: 16px;font-weight:700;}
