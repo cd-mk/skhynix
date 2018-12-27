@@ -11,28 +11,43 @@
 </head>
 <body>
   <div class="wrap">
+    <div class="header">
+      <img src="./images/img-header.jpg" alt="">
+    </div>
     <div class="login-wrap">
       <div class="login-box">
-        <div class="login-input">
-          <input type="text" placeholder="아이디" class="input-user id">
-          <input type="password" placeholder="비밀번호" class="input-user pw">
+        <div class="user-login">
+          <div class="input-wrap">
+            <input type="text" placeholder="아이디" class="input-user">
+            <input type="password" placeholder="비밀번호" class="input-user">
+          </div>
           <a href="#url" class="btn-login">로그인</a>
         </div>
-        <div class="login-sns">
-          <a href="#url" class="btn-sns">
-            <img src="./images/btn-fb.png" alt="">
-          </a>
-          <a href="#url" class="btn-sns">
-            <img src="./images/btn-ko.png" alt="">
-          </a>
-          <a href="#url" class="btn-sns">
-            <img src="./images/btn-nv.png" alt="">
-          </a>
+
+        <div class="lost-wrap">
+          <a href="#url">회원가입</a>
+          <a href="#url">| 아이디 / 비밀번호 찾기</a>
         </div>
+
+        <ul class="login-sns">
+          <li>
+            <a href="#url" class="btn-sns nv">네이버 아이디로 로그인</a>
+          </li>
+          <li>
+            <a href="#url" class="btn-sns ko">카카오 아이디로 로그인</a>
+          </li>
+          <li>
+            <a href="#url" class="btn-sns fb">페이스북 아이디로 로그인</a>
+          </li>
+          <li>
+            <a href="#url" class="btn-sns gl">구글 아이디로 로그인</a>
+          </li>
+        </ul>
+        <p class="login-notice">※ 기업 회원은 소셜로그인이 불가합니다.</p>
       </div>
     </div>
-    <div class="img-box">
-      <img src="./images/img-login-map.jpg" alt="">
+    <div class="footer">
+      <img src="./images/img-footer.jpg" alt="">
     </div>
   </div>
 </body>
