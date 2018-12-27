@@ -117,3 +117,8 @@ ul.alt li:first-child {
 	border-top:0;
 	padding-top: 0;
 }
+
+img {
+	width: 100%;
+	vertical-align: middle;
+}
