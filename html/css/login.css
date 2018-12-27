@@ -15,6 +15,24 @@
   background: rgba(0, 0, 0, 0.6);
   box-sizing: border-box;
 }
+.login-wrap .login-box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 50%;
+  height: 5px;
+  background: #e31837;
+}
+.login-wrap .login-box::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 50%;
+  height: 5px;
+  background: #f58025;
+}
 .login-box .user-login {
   position: relative;
 }
