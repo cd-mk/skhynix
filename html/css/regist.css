@@ -1,1 +1,39 @@
 @charset "utf-8";
+.personal-basics {background-color:#f8f8f8;border: 1px solid#dddddd;color:#707070;padding:25px 40px;}
+.personal-basics .inner {position: relative;margin-top:25px;padding-left:155px;}
+.personal-basics .photo {position: absolute;top:0;left:0;border:1px solid #dddddd;} 
+.personal-basics ul {padding-top:22px;}
+.personal-basics ul li {float:left;width:50%;color:#707070;font-weight:bold;margin-top:10px;}
+.personal-basics ul li.address {width:100%;}
+
+
+.personal-basics strong {display: inline-block;width:110px;}
+.personal-basics span {display: inline-block;margin-left:7px;}
+.personal-info {border-width: 0 1px 1px 1px; border-style:solid;border-color: #dddddd;font-size:16px;}
+.personal-info h3 {font-size:20px;border-top:1px solid #dddddd;padding:0 40px;height:65px;line-height:65px;}
+.personal-info h3:first-child {border:0;}
+.personal-info h3::before {content:''; clear:both;display:inline-block;margin-right:10px;width:7px;height:7px;background:#585858;border-radius: 100%;vertical-align: middle;}
+
+.personal-info .inner {padding:0 30px 25px 30px;}
+.personal-info .inner .header {display: table;width:100%;height:43px;line-height:43px;border:1px solid #ddd;}
+.personal-info .inner .header li {display: table-cell;padding:0 10px;background-color:#f8f8f8;border-left:1px solid #ddd;border-collapse: collapse;text-align:center;}
+.personal-info .inner .header li:first-child {border-left:0;}
+
+.personal-info .inner .info-list {display: table;width:100%;border:1px solid #ddd;margin-top:6px;}
+.personal-info .inner .info-list li {display: table-cell;border-left:1px solid #ddd;}
+.personal-info .inner .info-list li:first-child {border-left:0;}
+.personal-info .inner .info-list li input, .personal-info .inner .info-list li  select {border:0;width:100%;}
+.personal-info .inner li {box-sizing: border-box;}
+.personal-info .inner li.degree {width:80px}
+.personal-info .inner li.School-name {width:125px}
+.personal-info .inner li.department-name {width:125px}
+.personal-info .inner li.entrance-date {width:125px}
+.personal-info .inner li.entrance-date input {width:110px}
+.personal-info .inner li.graduation-date {width:125px}
+.personal-info .inner li.graduation-date input {width:110px}
+.personal-info .inner li.graduated {width:80px}
+.personal-info .inner li.grade {width:80px}
+.personal-info .inner li.grade input {width:30px;padding:0 4px;}
+.personal-info .inner li.file {}
+.personal-info .inner li.progress {width:100px}
+.personal-info .inner li.certifi {width:100px}

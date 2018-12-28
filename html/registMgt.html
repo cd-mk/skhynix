@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login</title>
-
+  <title>이력서 등록관리</title>
+  <link href='https://fonts.googleapis.com/earlyaccess/notosanskr.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/regist.css">
 </head>
@@ -16,9 +16,9 @@
         
         <div class="nav">
           <ul class="gnb">
-              <li class="on"><a href="career.html">채용 정보</a></li>
-              <li><a href="registMgt.html">이력서 등록/관리</a></li>
-              <li><a href="myPage.html">마이페이지</a></li>
+              <li class="on"><a href="registMgt.html">Career Path</a></li>
+              <li><a href="resumeBuilder.html">Resume Builder</a></li>
+              <li><a href="career-list.html">Careers</a></li>
           </ul>
           <ul class="lnb">
               <li><a href="login.html">로그인</a></li>
@@ -38,6 +38,153 @@
     <div id="container">
       <div class="contents regist-wrap">
         <h2>이력서 등록관리</h2>
+
+        <div class="personal-basics">
+          <h3>개인기본사항</h3>
+          <div class="inner">
+            <div class="photo"><img src="images/personal-photo.jpg" alt=""></div>
+            <ul class="clearfix">
+              <li>
+                <strong>이름 : </strong>
+                <span>김OO (여)</span>
+              </li>
+              <li>
+                <strong>주민등록번호 :</strong >
+                <span><input type="text"></span>
+              </li>
+              <li>
+                <strong>전화번호(HP) :</strong>
+                <span><input type="text"></span>
+              </li>
+              <li>
+                <strong>이메일 : </strong>
+                <span><input type="text"></span>
+              </li>
+              <li class="address">
+                <strong>주소 :</strong>
+                <span class="address-1">
+                  <input type="text">
+                  <button>주소찾기</button>
+                </span>
+                <span class="address-2">
+                  <input type="text">
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="personal-info">
+          <h3>학력사항</h3>
+          <div class="inner info-1">
+            <ul class="header">
+              <li class="degree">학위구분</li>
+              <li class="School-name">학교명</li>
+              <li class="department-name">학과명</li>
+              <li class="entrance-date">입학년원일</li>
+              <li class="graduation-date">졸업년월일</li>
+              <li class="graduated">졸업구분</li>
+              <li class="grade">학점</li>
+              <li class="file">파일첨부</li>
+              <li class="progress">진행상황</li>
+              <li class="certifi">인증</li>
+            </ul>
+            <ul class="info-list">
+              <li class="degree">
+                <select>
+                  <option>중졸</option>
+                </select>
+              </li>
+              <li class="School-name"><input type="text"></li>
+              <li class="department-name"><input type="text"></li>
+              <li class="entrance-date"><input type="date"></li>
+              <li class="graduation-date"><input type="date"></li>
+              <li class="graduated">
+                <select>
+                  <option>졸업</option>
+                </select>
+              </li>
+              <li class="grade"><input type="text" value="4.0"> / <input type="text" value="5.0"></li>
+              <li class="file"><input type="file" value="찾기"></li>
+              <li class="progress"><a href="#" class="btn impossible">인증불가</a></li>
+              <li class="certifi"><a href="#" class="btn request">인증요청</a></li>
+            </ul>
+            <ul class="info-list">
+              <li class="degree">
+                <select>
+                  <option>중졸</option>
+                </select>
+              </li>
+              <li class="School-name"><input type="text"></li>
+              <li class="department-name"><input type="text"></li>
+              <li class="entrance-date"><input type="date"></li>
+              <li class="graduation-date"><input type="date"></li>
+              <li class="graduated">
+                <select>
+                  <option>졸업</option>
+                </select>
+              </li>
+              <li class="grade"><input type="text" value="4.0"> / <input type="text" value="5.0"></li>
+              <li class="file"><input type="file" value="찾기"></li>
+              <li class="progress"><a href="#" class="btn impossible">인증불가</a></li>
+              <li class="certifi"><a href="#" class="btn request">인증요청</a></li>
+            </ul>
+            <ul class="info-list">
+              <li class="degree">
+                <select>
+                  <option>중졸</option>
+                </select>
+              </li>
+              <li class="School-name"><input type="text"></li>
+              <li class="department-name"><input type="text"></li>
+              <li class="entrance-date"><input type="date"></li>
+              <li class="graduation-date"><input type="date"></li>
+              <li class="graduated">
+                <select>
+                  <option>졸업</option>
+                </select>
+              </li>
+              <li class="grade"><input type="text" value="4.0"> / <input type="text" value="5.0"></li>
+              <li class="file"><input type="file" value="찾기"></li>
+              <li class="progress"><a href="#" class="btn impossible">인증불가</a></li>
+              <li class="certifi"><a href="#" class="btn request">인증요청</a></li>
+            </ul>
+           
+          </div>
+
+          <h3>외국어/자격증</h3>
+          <div class="inner info-2">
+    
+            <ul class="info-list">
+              <li class="degree">
+                <select>
+                  <option>중졸</option>
+                </select>
+              </li>
+              <li class="School-name"><input type="text"></li>
+              <li class="department-name"><input type="text"></li>
+              <li class="entrance-date"><input type="date"></li>
+              <li class="graduation-date"><input type="date"></li>
+              <li class="graduated">
+                <select>
+                  <option>졸업</option>
+                </select>
+              </li>
+              <li class="grade"><input type="text" value="4.0"> / <input type="text" value="5.0"></li>
+              <li class="file"><input type="file" value="찾기"></li>
+              <li class="progress"><a href="#" class="btn impossible">인증불가</a></li>
+              <li class="certifi"><a href="#" class="btn request">인증요청</a></li>
+            </ul>
+          
+          </div>
+
+          <h3>경력</h3>
+          <h3>기타</h3>
+
+          
+        </div>
+
+
       </div>
     </div>
 
@@ -56,6 +203,7 @@
     </div>
     
   </div>
-
+  <script src="js/jquery.min.js"></script>
+  <script src="js/common.js"></script>
 </body>
 </html>

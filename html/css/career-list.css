@@ -7,11 +7,6 @@
 }
 
 .career-info {
-  width: 1240px;
-  height: 698px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  margin: 25px auto 0;
   background: #fff;
   padding: 36px 39px 156px;
 }
@@ -51,7 +46,7 @@
 }
 .search-box .search-input {
   float: left;
-  width: 343px;
+  width: 341px;
   height: 43px;
   padding: 13px 13px 12px;
   border: 1px solid #ddd;
