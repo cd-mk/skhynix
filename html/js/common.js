@@ -65,4 +65,31 @@ $(function() {
     });
   }
   searchClear();
+
+  function listShow() {
+    $('.list-change').on('change', function() {
+      var opt = $(this).val();
+
+      $(this).find('option').eq(0).prop('selected', true);
+      $('.info-2 .info-list').hide();
+      $('.info-2 .info-list' + '.' + opt).show();
+
+    });
+  }
+  listShow();
+
+  function setInfoList() {
+    $('.btn-plus').on('click', function() {
+      var addList = $(this).closest('.inner').find('.info-list').eq(0).clone().addClass('cloned').attr('style', 'display: block');
+
+      $(this).closest('.add-list').before(addList);
+    });
+
+    $('.btn-minus').on('click', function() {
+      if ($(this).closest('.inner').find('.info-list').length > 1) {
+        $(this).closest('.add-list').prev('.cloned').remove();
+      }
+    });
+  }
+  setInfoList();
 });
