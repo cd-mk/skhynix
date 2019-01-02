@@ -2,13 +2,56 @@
 .personal-basics {background-color:#f8f8f8;border: 1px solid#dddddd;color:#707070;padding:25px 40px;}
 .personal-basics .inner {position: relative;margin-top:25px;padding-left:155px;}
 .personal-basics .photo {position: absolute;top:0;left:0;border:1px solid #dddddd;} 
-.personal-basics ul {padding-top:22px;}
+.personal-basics ul {padding-top:9.5px;}
 .personal-basics ul li {float:left;width:50%;color:#707070;font-weight:bold;margin-top:10px;}
 .personal-basics ul li.address {width:100%;}
-
-
-.personal-basics strong {display: inline-block;width:110px;}
-.personal-basics span {display: inline-block;margin-left:7px;}
+.personal-basics ul li:first-child,
+.personal-basics ul li:nth-child(2) {
+  margin-top: 0;
+}
+.personal-basics ul li:first-child {
+  margin-top: 13.5px;
+}
+.personal-basics strong {display: inline-block;width:100px;}
+.personal-basics span {position: relative; display: inline-block;}
+.personal-basics ul li:first-child strong {
+  width: auto;
+}
+.personal-basics input {
+  font-size: 16px;
+  font-weight: 700;
+  color: #707070;
+}
+.personal-basics .input-small {
+  width: 108px;
+}
+.personal-basics .input-medium {
+  width: 272px;
+}
+.personal-basics .input-large {
+  width: 577px;
+}
+.personal-basics .address-1::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.personal-basics .address-1 input {
+  float: left;
+  border-right: 0;
+}
+.personal-basics .address-1 .btn-search-address {
+  width: 42px;
+  height: 43px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff url(../images/ico-search.jpg) no-repeat center;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.personal-basics .address-2 {
+  margin-left: 2px;
+}
 .personal-info {border-width: 0 1px 1px 1px; border-style:solid;border-color: #dddddd;font-size:16px;}
 .personal-info h3 {font-size:20px;border-top:1px solid #dddddd;padding:0 40px;height:65px;line-height:65px;}
 .personal-info h3:first-child {border:0;}
@@ -16,24 +59,208 @@
 
 .personal-info .inner {padding:0 30px 25px 30px;}
 .personal-info .inner .header {display: table;width:100%;height:43px;line-height:43px;border:1px solid #ddd;}
-.personal-info .inner .header li {display: table-cell;padding:0 10px;background-color:#f8f8f8;border-left:1px solid #ddd;border-collapse: collapse;text-align:center;}
+.personal-info .inner .header li {display: table-cell;padding: 0 !important; background-color:#f8f8f8;border-left:1px solid #ddd;border-collapse: collapse;text-align:center;font-weight: 700;}
 .personal-info .inner .header li:first-child {border-left:0;}
 
 .personal-info .inner .info-list {display: table;width:100%;border:1px solid #ddd;margin-top:6px;}
-.personal-info .inner .info-list li {display: table-cell;border-left:1px solid #ddd;}
+.personal-info .inner .info-list li {position: relative; display: table-cell;border-left:1px solid #ddd; border-collapse: collapse;}
 .personal-info .inner .info-list li:first-child {border-left:0;}
 .personal-info .inner .info-list li input, .personal-info .inner .info-list li  select {border:0;width:100%;}
+.personal-info .inner .info-list li input {
+  font-size: 16px;
+  font-weight: 700;
+  color: #707070
+}
 .personal-info .inner li {box-sizing: border-box;}
-.personal-info .inner li.degree {width:80px}
+.personal-info .inner li.degree {width:76px;}
 .personal-info .inner li.School-name {width:125px}
-.personal-info .inner li.department-name {width:125px}
-.personal-info .inner li.entrance-date {width:125px}
-.personal-info .inner li.entrance-date input {width:110px}
-.personal-info .inner li.graduation-date {width:125px}
-.personal-info .inner li.graduation-date input {width:110px}
-.personal-info .inner li.graduated {width:80px}
-.personal-info .inner li.grade {width:80px}
-.personal-info .inner li.grade input {width:30px;padding:0 4px;}
-.personal-info .inner li.file {}
-.personal-info .inner li.progress {width:100px}
-.personal-info .inner li.certifi {width:100px}
+.personal-info .inner li.department-name {width:154px}
+.personal-info .inner li.entrance-date {width:140px}
+.personal-info .inner li.entrance-date input {width:139px}
+.personal-info .inner li.graduation-date {width:137px}
+.personal-info .inner li.graduation-date input {width:136px}
+.personal-info .inner li.graduated {width:67px}
+.personal-info .inner li.grade {width:89px;padding: 0 6px;}
+.personal-info .inner li.grade input {width:30px; height: 30px; padding:0 2px; border: 1px solid #ddd;}
+.personal-info .inner li.file {overflow: hidden; width: 117px; padding: 0 7px;}
+.personal-info .inner li.file .btn-save {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 48px;
+  height: 31px;
+  line-height: 31px;
+  text-align: center;
+  border: 1px solid #ddd;
+  color: #707070;
+  background: #f8f8f8 url(../images/ico-save.jpg) no-repeat center;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.personal-info .inner li.progress {width:96px; text-align: center;}
+.personal-info .inner li.progress .btn {
+  display: inline-block;
+  width: 77px;
+  height: 31px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 31px;
+}
+.personal-info .inner li.progress .btn.impossible {
+  background: #e31837;
+}
+.personal-info .inner li.progress .btn.wait {
+  background: #5b3d0f;
+}
+.personal-info .inner li.progress .btn.fail {
+  background: #e31837;
+}
+.personal-info .inner li.progress .btn.success {
+  background: #f58025;
+}
+.personal-info .inner li.progress .btn.ing {
+  background: #288116;
+}
+.personal-info .inner li.certifi {width:97px; text-align: center;}
+.personal-info .inner li.certifi .btn {
+  display: inline-block;
+  width: 77px;
+  height: 31px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 31px;
+}
+.personal-info .inner li.certifi .btn.impossible {
+  background: #e31837;
+}
+.personal-info .inner li.certifi .btn.request {
+  background: #4f4f4f;
+}
+.personal-info .inner li.certifi .btn.retry {
+  background: #202020;
+}
+.personal-info .inner.info-2 .info-list {
+  overflow: hidden;
+  display: block;
+  border: 0;
+  margin-top: 5px;
+}
+.personal-info .inner.info-2 .info-list:first-child {
+  margin-top: 0;
+}
+.personal-info .inner.info-2 .info-list li {
+  float: left;
+  margin-left: 5px;
+  border: 1px solid #ddd;
+}
+.personal-info .inner.info-2 .info-list li:first-child {
+  margin-left: 0;
+}
+.personal-info .inner.info-2 li.license {width: 138px;}
+.personal-info .inner.info-2 li.license-proof {width: 124px;}
+.personal-info .inner.info-2 li.license-publish {width: 228px;}
+
+.personal-info .inner.info-2 li.lang-test {width: 100px;}
+.personal-info .inner.info-2 li.lang {width: 92px;}
+.personal-info .inner.info-2 li.license-kind {width: 173px;}
+.personal-info .inner.info-2 li.score {width: 120px;}
+
+.personal-info .inner.info-2 li.blank {width: 100px; border-color: transparent;}
+.personal-info .inner.info-2 li.lang-grade {width: 163px;}
+
+
+.personal-info .inner.info-2 li.get-date {width: 269px; border: 0;}
+.personal-info .inner.info-2 li.get-date .label {
+  position: relative;
+  top: 13px;
+  display: inline-block;
+  margin-left: 22px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #707070;
+}
+.personal-info .inner.info-2 li.get-date input {
+  float: right;
+  border: 1px solid #ddd;
+  width: 194px;
+}
+.personal-info .inner.info-2 li.file,
+.personal-info .inner.info-2 li.progress,
+.personal-info .inner.info-2 li.certifi {
+  height: 43px;
+  padding-top: 5px;
+}
+.personal-info .inner.info-2 li.certifi {margin-left: 0; border-left: 0;}
+
+.personal-info .inner.info-3 .info-list {
+  overflow: hidden;
+  display: block;
+  border: 0;
+  margin-top: 0;
+}
+.personal-info .inner.info-3 .info-list li {
+  float: left;
+  margin-left: 5px;
+  border: 1px solid #ddd;
+}
+.personal-info .inner.info-3 .info-list li:first-child {
+  margin-left: 0;
+}
+.personal-info .inner.info-3 li.company {width: 194px;}
+.personal-info .inner.info-3 li.company-part {width: 124px;}
+.personal-info .inner.info-3 li.company-join {width: 223px;}
+.personal-info .inner.info-3 li.company-out {width: 219px;}
+
+.personal-info .inner.info-3 li.company-join,
+.personal-info .inner.info-3 li.company-out {
+  border: 0;
+}
+.personal-info .inner.info-3 li.company-join .label,
+.personal-info .inner.info-3 li.company-out .label {
+  position: relative;
+  top: 13px;
+  display: inline-block;
+  margin-left: 9px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #707070;
+} 
+.personal-info .inner.info-3 li.company-join input,
+.personal-info .inner.info-3 li.company-out input {
+  float: right;
+  border: 1px solid #ddd;
+  width: 147px;
+}
+.personal-info .inner.info-3 li.file,
+.personal-info .inner.info-3 li.progress,
+.personal-info .inner.info-3 li.certifi {
+  height: 43px;
+  padding-top: 5px;
+}
+.personal-info .inner.info-3 li.certifi {margin-left: 0; border-left: 0;}
+
+
+.personal-info .add-list {
+  overflow: hidden;
+  margin-top: 12px;
+}
+.personal-info .add-list button {
+  float: left;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  line-height: 36px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #777;
+  cursor: pointer;
+}
+.personal-info .add-list button:first-child {
+  margin-right: 4px;
+}
