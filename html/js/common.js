@@ -51,4 +51,18 @@ $(function() {
       cont.slideUp();
     }
   }
+
+  function searchClear() {
+    $('.search-clear').prev().each(function() {
+      $(this).keyup(function() {
+        $(this).next().toggle(Boolean($(this).val()));
+      });
+      $(this).next().toggle(Boolean($(this).val()));
+      $(this).next().click(function() {
+        $(this).prev().val('').focus();
+        $(this).hide();
+      });
+    });
+  }
+  searchClear();
 });
