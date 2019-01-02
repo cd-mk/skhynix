@@ -200,6 +200,9 @@
   overflow: hidden;
   display: block;
   border: 0;
+  margin-top: 5px;
+}
+.personal-info .inner.info-3 .info-list:first-child {
   margin-top: 0;
 }
 .personal-info .inner.info-3 .info-list li {
@@ -242,7 +245,10 @@
   padding-top: 5px;
 }
 .personal-info .inner.info-3 li.certifi {margin-left: 0; border-left: 0;}
-
+.personal-info .inner.info-2 .info-list.lang-list,
+.personal-info .inner.info-2 .info-list.award-list {
+  display: none;
+}
 
 .personal-info .add-list {
   overflow: hidden;
