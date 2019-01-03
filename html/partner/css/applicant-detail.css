@@ -5,7 +5,9 @@
   background: #f8f8f8;
   padding-bottom: 226px;
 }
-
+.appli-detail {
+  overflow: hidden;
+}
 .appli-detail .career-title {
   padding: 20px 22px;
   background: #3e3e3e;
@@ -85,12 +87,24 @@
   overflow: hidden;
   display: table-cell;
   width: 1014px;
-  padding: 40px 56px 37px 36px;
+  padding: 40px 0 37px 36px;
   border-right: 1px solid #ddd;
   box-sizing: border-box;
 }
 .left-info .info-detail {
-  display: inline-block;
+  overflow: hidden;
+  display: table-cell;
+  width: 783px;
+  vertical-align: middle;
+}
+.left-info .info-detail .sub-title {
+  float: left;
+  width: 169px;
+  font-weight: 700;
+  color: #353535;
+}
+.left-info .info-detail .sub-title + ul {
+  float: left;
 }
 .left-info .info-detail > ul {
   overflow: hidden;
@@ -114,9 +128,11 @@
   border-left: 0;
 }
 .left-info .company-detail {
-  float: right;
-  vertical-align: top;
+  display: table-cell;
+  min-width: 194px;
+  vertical-align: middle;
   text-align: center;
+  box-sizing: border-box;
 }
 .left-info .company-detail .title {
   font-weight: 700;
@@ -131,5 +147,32 @@
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+}
+
+.appli-detail .btn-list {
+  float: right;
+  overflow: hidden;
+  margin-top: 178px;
+}
+.appli-detail .btn-list > li {
+  float: left;
+  margin-left: 13px;
+}
+.appli-detail .btn-list > li select {
+  width: 147px;
+}
+.appli-detail .btn-list > li > a {
+  display: inline-block;
+  min-width: 147px;
+  height: 43px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background: #202020;
+  color: #fff;
+  text-align: center;
+  line-height: 43px;
+}
+.appli-detail .btn-list > li:first-child {
+  margin-left: 0;
 }
 
