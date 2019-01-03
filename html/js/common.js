@@ -67,12 +67,12 @@ $(function() {
   searchClear();
 
   function listShow() {
-    $('.list-change').on('change', function() {
+    $('.js-change-wrap').delegate('.list-change', 'change', function() {
       var opt = $(this).val();
 
       $(this).find('option').eq(0).prop('selected', true);
-      $('.info-2 .info-list').hide();
-      $('.info-2 .info-list' + '.' + opt).show();
+      $(this).closest('.js-change').find('.info-list').hide();
+      $(this).closest('.js-change').find('.info-list' + '.' + opt).show();
 
     });
   }
@@ -80,7 +80,14 @@ $(function() {
 
   function setInfoList() {
     $('.btn-plus').on('click', function() {
-      var addList = $(this).closest('.inner').find('.info-list').eq(0).clone().addClass('cloned').attr('style', 'display: block');
+      var addList;
+      var chkWrap = $(this).closest('.inner').hasClass('js-change-wrap') ? true : false;
+
+      if (chkWrap) {
+        addList = $(this).closest('.inner').find('.js-change').eq(0).clone().addClass('cloned');
+      } else {
+        addList = $(this).closest('.inner').find('.info-list').eq(0).clone().addClass('cloned').attr('style', 'display: block');
+      }
 
       $(this).closest('.add-list').before(addList);
     });
