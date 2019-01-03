@@ -160,67 +160,70 @@
           </div>
 
           <h3>외국어/자격증</h3>
-          <div class="inner info-2">
-            <ul class="info-list default-list">
-              <li class="license">
-                <select class="list-change">
-                  <option value="default-list">자격증/면허증</option>
-                  <option value="lang-list">어학시험</option>
-                  <option value="award-list">수상내역/공모전</option>
-                </select>
-              </li>
-              <li class="license-proof"><input type="text" placeholder="자격증명"></li>
-              <li class="license-publish"><input type="text" placeholder="발행처/기관"></li>
-              <li class="get-date"><span class="label">취득일</span><input type="date"></li>
-              <li class="file">
-                <input type="file" id="file-search"><label for="file-search">찾기</label>
-                <button type="button" class="btn-save">저장</button>
-              </li>
-              <li class="progress"><span class="btn ing">인증진행</span></li>
-              <li class="certifi"><a href="#" class="btn impossible">인증불가</a></li>
-            </ul>
-            <ul class="info-list lang-list">
-              <li class="lang-test">
-                <select class="list-change">
-                  <option value="lang-list">어학시험</option>
-                  <option value="default-list">자격증/면허증</option>
-                  <option value="award-list">수상내역/공모전</option>
-                </select>
-              </li>
-              <li class="lang"><input type="text" placeholder="언어"></li>
-              <li class="license-kind"><input type="text" placeholder="시험종류"></li>
-              <li class="score"><input type="text" placeholder="점수"></li>
-              <li class="get-date"><span class="label">취득일</span><input type="date"></li>
-              <li class="file">
-                <input type="file" id="file-search"><label for="file-search">찾기</label>
-                <button type="button" class="btn-save">저장</button>
-              </li>
-              <li class="progress"><span class="btn ing">인증진행</span></li>
-              <li class="certifi"><a href="#" class="btn impossible">인증불가</a></li>
-            </ul>
-            <ul class="info-list lang-list">
-              <li class="blank"></li>
-              <li class="lang-grade"><input type="text" placeholder="급수"></li>
-              <li class="license-publish"><input type="text" placeholder="발행처/기관"></li>
-            </ul>
-            <ul class="info-list award-list">
-              <li class="license">
-                <select class="list-change">
-                  <option value="award-list">수상내역/공모전</option>
-                  <option value="lang-list">어학시험</option>
-                  <option value="default-list">자격증/면허증</option>
-                </select>
-              </li>
-              <li class="license-proof"><input type="text" placeholder="수상명"></li>
-              <li class="license-publish"><input type="text" placeholder="수여기관"></li>
-              <li class="get-date"><span class="label">취득일</span><input type="date"></li>
-              <li class="file">
-                <input type="file" id="file-search"><label for="file-search">찾기</label>
-                <button type="button" class="btn-save">저장</button>
-              </li>
-              <li class="progress"><span class="btn ing">인증진행</span></li>
-              <li class="certifi"><a href="#" class="btn impossible">인증불가</a></li>
-            </ul>
+          <div class="inner info-2 js-change-wrap">
+            <div class="js-change">
+                <ul class="info-list default-list">
+                  <li class="license">
+                    <select class="list-change">
+                      <option value="default-list">자격증/면허증</option>
+                      <option value="lang-list">어학시험</option>
+                      <option value="award-list">수상내역/공모전</option>
+                    </select>
+                  </li>
+                  <li class="license-proof"><input type="text" placeholder="자격증명"></li>
+                  <li class="license-publish"><input type="text" placeholder="발행처/기관"></li>
+                  <li class="get-date"><span class="label">취득일</span><input type="date"></li>
+                  <li class="file">
+                    <input type="file" id="file-search"><label for="file-search">찾기</label>
+                    <button type="button" class="btn-save">저장</button>
+                  </li>
+                  <li class="progress"><span class="btn ing">인증진행</span></li>
+                  <li class="certifi"><a href="#" class="btn impossible">인증불가</a></li>
+                </ul>
+                <ul class="info-list lang-list">
+                  <li class="lang-test">
+                    <select class="list-change">
+                      <option value="lang-list">어학시험</option>
+                      <option value="default-list">자격증/면허증</option>
+                      <option value="award-list">수상내역/공모전</option>
+                    </select>
+                  </li>
+                  <li class="lang"><input type="text" placeholder="언어"></li>
+                  <li class="license-kind"><input type="text" placeholder="시험종류"></li>
+                  <li class="score"><input type="text" placeholder="점수"></li>
+                  <li class="get-date"><span class="label">취득일</span><input type="date"></li>
+                  <li class="file">
+                    <input type="file" id="file-search"><label for="file-search">찾기</label>
+                    <button type="button" class="btn-save">저장</button>
+                  </li>
+                  <li class="progress"><span class="btn ing">인증진행</span></li>
+                  <li class="certifi"><a href="#" class="btn impossible">인증불가</a></li>
+                </ul>
+                <ul class="info-list lang-list">
+                  <li class="blank"></li>
+                  <li class="lang-grade"><input type="text" placeholder="급수"></li>
+                  <li class="license-publish"><input type="text" placeholder="발행처/기관"></li>
+                </ul>
+                <ul class="info-list award-list">
+                  <li class="license">
+                    <select class="list-change">
+                      <option value="award-list">수상내역/공모전</option>
+                      <option value="lang-list">어학시험</option>
+                      <option value="default-list">자격증/면허증</option>
+                    </select>
+                  </li>
+                  <li class="license-proof"><input type="text" placeholder="수상명"></li>
+                  <li class="license-publish"><input type="text" placeholder="수여기관"></li>
+                  <li class="get-date"><span class="label">취득일</span><input type="date"></li>
+                  <li class="file">
+                    <input type="file" id="file-search"><label for="file-search">찾기</label>
+                    <button type="button" class="btn-save">저장</button>
+                  </li>
+                  <li class="progress"><span class="btn ing">인증진행</span></li>
+                  <li class="certifi"><a href="#" class="btn impossible">인증불가</a></li>
+                </ul>
+            </div>
+            
             <div class="add-list">
               <button class="btn-plus">+</button>
               <button class="btn-minus">-</button>
