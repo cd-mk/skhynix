@@ -49,7 +49,7 @@
               <td>&nbsp;</td>
               <th scope="row">주민등록번호</th>
               <td>&nbsp;</td>
-              <td rowspan="5">사진</td>
+              <td rowspan="5" class="center">사진</td>
             </tr>
             <tr>
               <th scope="row" rowspan="2">성명</th>
@@ -64,7 +64,7 @@
             </tr>
             <tr>
               <th scope="row">국적(영주권)</th>
-              <td colspan="3">한국 외국(국적명: ) (해외국적 취득일 : 년 월)</td>
+              <td colspan="3"><input type="radio" id="korea" name="nation" checked>한국 <input type="radio" id="foreign" name="nation"> 외국(국적명:<span style="width:90px"></span> ) (해외국적 취득일 : <span style="width:90px"></span>년<span style="width:40px"></span> 월)</td>
             </tr>
             <tr>
               <th scope="row">현주소</th>
@@ -108,7 +108,7 @@
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td class="center">학사 (월 예정)</td>
+              <td class="center">학사 (<span style="width:40px;"></span>월 예정)</td>
               <td class="center">90/100</td>
             </tr>
             <tr>
@@ -116,7 +116,7 @@
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td class="center">&nbsp;</td>
+              <td class="center">석사 (<span style="width:40px;"></span>월 예정)</td>
               <td class="center">90/100</td>
             </tr>
             <tr>
@@ -124,7 +124,7 @@
               <td>&nbsp;</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td class="center">&nbsp;</td>
+              <td class="center">박사 (<span style="width:40px;"></span>월 예정)</td>
               <td class="center">90/100</td>
             </tr>
           </tbody>
@@ -237,21 +237,29 @@
         </table>
         <table class="tbl type2">
           <caption>병역사항</caption>
+          <colgroup>
+            <col>
+            <col style="width:120px">
+            <col style="width:140px">
+            <col style="width:400px">
+            <col style="width:85px">
+            <col>
+          </colgroup>
           <tbody>
             <tr>
               <th scope="col" rowspan="3">병역사항</th>
-              <th scope="col" rowspan="2">필</th>
+              <td rowspan="2"><input type="radio" name="pil1" checked>필</td>
               <th scope="col">군별</th>
-              <th scope="col">&nbsp;</th>
+              <td><input type="radio" name="amy1" checked>육군 <input type="radio" name="amy1">공군 <input type="radio" name="amy1">해군 <input type="radio" name="amy1">특례 <input type="radio" name="amy1">기타(<span style="width:40px"></span>)</td>
               <th scope="col">계급</th>
-              <th scope="col">&nbsp;</th>
+              <td>&nbsp;</td>
             </tr>
             <tr>
               <th scope="row">복무기간</th>
               <td colspan="3">&nbsp;&nbsp;&nbsp;대상 (보훈관계: 보훈번호: )</td>
             </tr>
             <tr>
-              <td>&nbsp;미필/면제</td>
+              <td><input type="radio" name="pil1">미필/면제</td>
               <th scope="row">미필/면제사유</th>
               <td colspan="3">&nbsp;&nbsp;&nbsp;대상 (장애내용 및 급수: 장애등록번호:)</td>
             </tr>

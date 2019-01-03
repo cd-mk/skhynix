@@ -274,3 +274,36 @@
   margin-right: 4px;
 }
 .js-change {margin-top: 5px;}
+
+.ui-dialog .ui-dialog-buttonpane button { 
+  display: inline-block;
+  width: 77px;
+  height: 31px;
+  background:#202020;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 31px;
+  border-radius: 0;
+  border:0;
+  padding:0;}
+      #progressbar {
+      margin-top: 20px;
+    }
+  
+   .progress-label {
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+    text-align: center;
+    padding-top: 7px;
+}
+    .ui-dialog-titlebar-close {
+      display: none;
+    }
+    .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 0;
+}   
+
+.ui-dialog-titlebar {background: #3c3c40;color:#fff;border:0;}
+.ui-progressbar-value {background: #f58025;}
