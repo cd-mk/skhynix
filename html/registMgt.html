@@ -8,6 +8,7 @@
   <link href='https://fonts.googleapis.com/earlyaccess/notosanskr.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/regist.css">
+
 </head>
 <body>
   <div class="wrap">
@@ -107,7 +108,7 @@
               </li>
               <li class="grade"><input type="text" value="4.0"> / <input type="text" value="5.0"></li>
               <li class="file"><input type="file" value="찾기"></li>
-              <li class="progress"><span class="btn impossible">인증불가</span></li>
+              <li class="progress"><span class="btn wait">인증대기</span></li>
               <li class="certifi"><a href="#" class="btn request">인증요청</a></li>
             </ul>
             <ul class="info-list">
@@ -150,8 +151,8 @@
                 <input type="file" id="file-search"><label for="file-search">찾기</label>
                 <button type="button" class="btn-save">저장</button>
               </li>
-              <li class="progress"><span class="btn impossible">인증불가</span></li>
-              <li class="certifi"><a href="#" class="btn request">인증요청</a></li>
+              <li class="progress"><span id="downloadButton1"class="btn ing">인증진행</span></li>
+              <li class="certifi"><a href="#url" id="downloadButton" class="btn request">인증요청</a></li>
             </ul>
             <div class="add-list">
               <button class="btn-plus">+</button>
@@ -177,7 +178,7 @@
                     <input type="file" id="file-search"><label for="file-search">찾기</label>
                     <button type="button" class="btn-save">저장</button>
                   </li>
-                  <li class="progress"><span class="btn ing">인증진행</span></li>
+                  <li class="progress"><span class="btn fail">인증실패</span></li>
                   <li class="certifi"><a href="#" class="btn impossible">인증불가</a></li>
                 </ul>
                 <ul class="info-list lang-list">
@@ -250,6 +251,11 @@
             </div>
           </div>
         </div>
+        <!-- 인증요청 progress -->
+        <div id="dialog" title="인증요청">
+          <div class="progress-label">인증시작..</div>
+          <div id="progressbar"></div>
+        </div>
 
 
       </div>
@@ -270,7 +276,98 @@
     </div>
     
   </div>
+
   <script src="js/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/common.js"></script>
+  <script>
+    $(function () {
+      var progressTimer,
+        progressbar = $("#progressbar"),
+        progressLabel = $(".progress-label"),
+        dialogButtons = [{
+          text: "인증취소",
+          click: closeDownload
+        }],
+        dialog = $("#dialog").dialog({
+          autoOpen: false,
+          closeOnEscape: false,
+          resizable: false,
+          buttons: dialogButtons,
+          open: function () {
+            progressTimer = setTimeout(progress, 1000);
+          },
+          beforeClose: function () {
+            downloadButton.button("option", {
+              disabled: false,
+              label: "인증완료"
+            });
+            $("#downloadButton1").removeClass("ing");
+           $("#downloadButton1").addClass("success");
+           $("#downloadButton1").text("인증성공");
+          }
+        }),
+        downloadButton = $("#downloadButton")
+          .button()
+          .on("click", function () {
+            $(this).button("option", {
+              disabled: true,
+              label: "인증진행중..."
+            });
+            dialog.dialog("open");
+          });
+
+      progressbar.progressbar({
+        value: false,
+        change: function () {
+          progressLabel.text("진행률: " + progressbar.progressbar("value") + "%");
+        },
+        complete: function () {
+          progressLabel.text("인증성공!");
+          dialog.dialog("option", "buttons", [{
+            text: "Close",
+            click: closeDownload
+          }]);
+          $(".ui-dialog button").last().trigger("focus");
+        }
+      });
+
+      function progress() {
+        var val = progressbar.progressbar("value") || 0;
+
+        progressbar.progressbar("value", val + Math.floor(Math.random() * 3));
+
+        if (val <= 99) {
+          progressTimer = setTimeout(progress, 50);
+        }
+      }
+
+      function closeDownload() {
+        clearTimeout(progressTimer);
+        dialog
+          .dialog("option", "buttons", dialogButtons)
+          .dialog("close");
+        progressbar.progressbar("value", false);
+        progressLabel
+          .text("인증시작...");
+        downloadButton.trigger("focus");
+      }
+    });
+  </script>
+  <style>
+    #progressbar {
+      margin-top: 20px;
+    }
+  
+    .progress-label {
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #fff;
+    }
+  
+    .ui-dialog-titlebar-close {
+      display: none;
+    }
+  </style>
 </body>
 </html>

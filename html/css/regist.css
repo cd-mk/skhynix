@@ -133,6 +133,9 @@
   font-weight: 700;
   text-align: center;
   line-height: 31px;
+  border-radius: 0;
+  border:0;
+  padding:0;
 }
 .personal-info .inner li.certifi .btn.impossible {
   background: #e31837;
