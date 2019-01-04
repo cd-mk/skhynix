@@ -78,6 +78,50 @@ $(function() {
   }
   listShow();
 
+  function optionChange() {
+    $('.inner').delegate('.degree select', 'change', function() {
+      var opt = $(this).val();
+
+      if (opt === '중졸' || opt === '고졸') {
+        $(this).closest('.info-list').find('.department-name input').css('opacity', 0);
+        $(this).closest('.info-list').find('.department-name span').css('opacity', 0);
+        $(this).closest('.info-list').find('.grade input').css('opacity', 0);
+        $(this).closest('.info-list').find('.grade span').css('opacity', 0);
+      } else {
+        $(this).closest('.info-list').find('.department-name input').css('opacity', 1);
+        $(this).closest('.info-list').find('.department-name span').css('opacity', 1);
+        $(this).closest('.info-list').find('.grade input').css('opacity', 1);
+        $(this).closest('.info-list').find('.grade span').css('opacity', 1);
+        $(this).closest('.info-list').find('input').attr('disabled', false);
+      }
+    });
+  }
+  optionChange();
+
+  function checkButton() {
+    var isFull;
+
+    $('.inner').delegate('input', 'blur', function() {
+      $(this).closest('.info-list').find('input[type=text]').each(function() {
+        
+        if ($(this).val() === '') {
+          isFull = true;
+        } else {
+          isFull = false;
+        }
+      });
+      if (!isFull) {
+        $(this).closest('.info-list').find('.progress span').css('opacity', 1);
+        $(this).closest('.info-list').find('.certifi a').css('opacity', 1);
+      } else {
+        $(this).closest('.info-list').find('.progress span').css('opacity', 0);
+        $(this).closest('.info-list').find('.certifi a').css('opacity', 0);
+      }
+
+    });
+  }
+  checkButton();
+
   function setInfoList() {
     $('.btn-plus').on('click', function() {
       var addList;
@@ -87,8 +131,14 @@ $(function() {
         addList = $(this).closest('.inner').find('.js-change').eq(0).clone().addClass('cloned');
       } else {
         addList = $(this).closest('.inner').find('.info-list').eq(0).clone().addClass('cloned').attr('style', 'display: block');
+        addList.find('.wait').attr('id', 'state-impossible2');
+        addList.find('.request').attr('id', 'btn-impossible2');
       }
-
+      addList.find('input').val('');
+      addList.find('input').attr('disabled', false);
+      addList.find('.degree select').find('option').eq(2).prop('selected', true);
+      addList.find('.progress span').css('opacity', 0);
+      addList.find('.certifi a').css('opacity', 0);
       $(this).closest('.add-list').before(addList);
     });
 

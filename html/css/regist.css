@@ -1,7 +1,8 @@
 @charset "utf-8";
 .personal-basics {background-color:#f8f8f8;border: 1px solid#dddddd;color:#707070;padding:25px 40px;}
 .personal-basics .inner {position: relative;margin-top:25px;padding-left:155px;}
-.personal-basics .photo {position: absolute;top:0;left:0;border:1px solid #dddddd;} 
+.personal-basics .photo {position: absolute;top:0;left:0;border:1px solid #dddddd; width: 131px; height: 164px;} 
+.personal-basics .photo img {width: 100%; height: 100%;} 
 .personal-basics ul {padding-top:9.5px;}
 .personal-basics ul li {float:left;width:50%;color:#707070;font-weight:bold;margin-top:10px;}
 .personal-basics ul li.address {width:100%;}
@@ -72,9 +73,10 @@
   color: #707070
 }
 .personal-info .inner li {box-sizing: border-box;}
-.personal-info .inner li.degree {width:76px;}
-.personal-info .inner li.School-name {width:125px}
-.personal-info .inner li.department-name {width:154px}
+.personal-info .inner li.degree {width:66px;}
+.personal-info .inner li.School-name {width:155px}
+.personal-info .inner li.department-name {width:134px}
+.personal-info .inner li.department-name input:disabled {background: #fff;}
 .personal-info .inner li.entrance-date {width:140px}
 .personal-info .inner li.entrance-date input {width:139px}
 .personal-info .inner li.graduation-date {width:137px}
@@ -82,6 +84,8 @@
 .personal-info .inner li.graduated {width:67px}
 .personal-info .inner li.grade {width:89px;padding: 0 6px;}
 .personal-info .inner li.grade input {width:30px; height: 30px; padding:0 2px; border: 1px solid #ddd;}
+.personal-info .inner li.grade input:disabled {background: #fff; border: 0;}
+.personal-info .inner li.grade input:disabled + span {opacity: 0;}
 .personal-info .inner li.file {overflow: hidden; width: 117px; padding: 0 7px;}
 .personal-info .inner li.file .btn-save {
   position: relative;
@@ -248,10 +252,6 @@
   padding-top: 5px;
 }
 .personal-info .inner.info-3 li.certifi {margin-left: 0; border-left: 0;}
-.personal-info .inner.info-2 .info-list.lang-list,
-.personal-info .inner.info-2 .info-list.award-list {
-  display: none;
-}
 
 .personal-info .add-list {
   overflow: hidden;
@@ -307,3 +307,4 @@
 
 .ui-dialog-titlebar {background: #3c3c40;color:#fff;border:0;}
 .ui-progressbar-value {background: #f58025;}
+.pgb {margin-top: 20px;}
