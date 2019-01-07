@@ -46,22 +46,17 @@ input[type="radio"]:checked {
 }
 .builder-wrap .btn-wrap {
     overflow: hidden;
-    margin-top: 15px
+    margin-top: 15px;
+    text-align: center;
 }
 .builder-wrap .btn-wrap a {
-    float: left;
-    height: 43px;
-    line-height: 43px;
-    color: #fff;
-    background: #202020;
-    font-weight: 700;
-    text-align: center;
-    margin-left: 10px;
-    padding: 0 15px;
-}
-.builder-wrap .btn-wrap a:first-child {
-    margin-left: 0;
-}
-.builder-wrap .btn-wrap a.align-right {
-    float: right;
+  display: inline-block;
+  height: 43px;
+  line-height: 43px;
+  color: #fff;
+  background: #202020;
+  font-weight: 700;
+  text-align: center;
+  margin-left: 10px;
+  padding: 0 15px;
 }

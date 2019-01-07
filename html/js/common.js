@@ -129,10 +129,21 @@ $(function() {
 
       if (chkWrap) {
         addList = $(this).closest('.inner').find('.js-change').eq(0).clone().addClass('cloned');
+
+        if ($(this).closest('.inner').hasClass('info-2')) {
+          addList.find('.progress span').removeAttr('class').addClass('btn wait').text('인증대기').attr('id', 'state-license4');
+          addList.find('.certifi a').removeAttr('class').addClass('btn request').text('인증요청').attr('id', 'btn-license4');
+        }
       } else {
         addList = $(this).closest('.inner').find('.info-list').eq(0).clone().addClass('cloned').attr('style', 'display: block');
-        addList.find('.wait').attr('id', 'state-impossible2');
-        addList.find('.request').attr('id', 'btn-impossible2');
+
+        if ($(this).closest('.inner').hasClass('info-1')) {
+          addList.find('.progress span').removeAttr('class').addClass('btn wait').text('인증대기').attr('id', 'state-impossible2');
+          addList.find('.certifi a').removeAttr('class').addClass('btn request').text('인증요청').attr('id', 'btn-impossible2');
+        } else if ($(this).closest('.inner').hasClass('info-3')) {
+          addList.find('.progress span').removeAttr('class').addClass('btn wait').text('인증대기').attr('id', 'state-career4');
+          addList.find('.certifi a').removeAttr('class').addClass('btn request').text('인증요청').attr('id', 'btn-career4');
+        }
       }
       addList.find('input').val('');
       addList.find('input').attr('disabled', false);
@@ -140,6 +151,11 @@ $(function() {
       addList.find('.progress span').css('opacity', 0);
       addList.find('.certifi a').css('opacity', 0);
       $(this).closest('.add-list').before(addList);
+
+      // plus 버튼 클릭 시 popup 이벤트 트리거
+      popup6();
+      license4();
+      career4();
     });
 
     $('.btn-minus').on('click', function() {

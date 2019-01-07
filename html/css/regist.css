@@ -150,6 +150,10 @@
 .personal-info .inner li.certifi .btn.retry {
   background: #202020;
 }
+.personal-info .inner li.certifi .btn.ing {
+  background: #ccc;
+  cursor: auto;
+}
 .personal-info .inner.info-2 .info-list {
   overflow: hidden;
   display: block;
@@ -308,3 +312,38 @@
 .ui-dialog-titlebar {background: #3c3c40;color:#fff;border:0;}
 .ui-progressbar-value {background: #f58025;}
 .pgb {margin-top: 20px;}
+
+.regist-wrap {
+  overflow: hidden;
+}
+.regist-wrap #dialog6,
+.regist-wrap #license4,
+.regist-wrap #career4 {
+  display: none;
+}
+
+.btn-wrap {
+  float: right;
+  overflow: hidden;
+  margin-top: 20px;  
+}
+.btn-wrap a {
+  float: left;
+  height: 43px;
+  line-height: 43px;
+  color: #fff;
+  background: #202020;
+  text-align: center;
+  font-weight: 700;
+  padding: 0 15px;
+}
+.btn-wrap a:first-child {
+  margin-right: 10px;
+}
+.hide {visibility: hidden;}
+.progress-label2 {
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+  text-align: center;
+  padding-top: 7px;
+}
