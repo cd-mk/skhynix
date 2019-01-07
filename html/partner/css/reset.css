@@ -76,6 +76,10 @@ input::placeholder {
 	font-weight: 700;
 	color: #707070;
 }
+input:disabled {
+	color: #8b8787 !important;
+	background: #d2d2d2;
+}
 input[type="date"] {
 	position: relative;
 	padding: 0 0 0 12px;
@@ -198,7 +202,11 @@ ul.alt li:first-child {
 	clear:both;
 	display: table;
 }
-
+.blind, caption {overflow:hidden;
+ 	position:absolute;
+ 	width:1px;
+ 	height:1px;
+ 	clip:rect(1px,1px,1px,1px);}
 
 
  @font-face {
@@ -267,3 +275,5 @@ ul.alt li:first-child {
 #footer li::before {content:''; clear:both;display:inline-block;width:1px;  height:14px;margin:0 10px;background: #fff;}
 #footer li:first-child::before {display: none;}
 #footer address {font-size:12px;font-weight:400;margin-top:10px;font-style: normal}
+
+span {display: inline-block;}
