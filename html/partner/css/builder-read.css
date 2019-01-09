@@ -45,18 +45,41 @@ input[type="radio"]:checked {
     width: 45px !important;
 }
 .builder-wrap .btn-wrap {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
     overflow: hidden;
-    margin-top: 15px;
+    margin-top: 20px;
     text-align: center;
 }
 .builder-wrap .btn-wrap a {
-  display: inline-block;
-  height: 43px;
-  line-height: 43px;
-  color: #fff;
-  background: #202020;
-  font-weight: 700;
-  text-align: center;
-  margin-left: 10px;
-  padding: 0 15px;
+    float: left;
+    height: 43px;
+    line-height: 43px;
+    color: #fff;
+    background: #202020;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 10px;
+    padding: 0 15px;
+}
+.builder-wrap .btn-wrap a:first-child {
+    margin-left: 0;
+}
+.builder-wrap .select-wrap {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+}
+.builder-wrap .select-wrap span {
+    float: left;
+    height: 43px;
+    line-height: 43px;
+    font-weight: 700;
+}
+.builder-wrap .select-wrap select {
+    float: left;
+    width: 120px;
+    margin-left: 8px;
 }

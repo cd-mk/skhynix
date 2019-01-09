@@ -12,7 +12,7 @@
 <body>
   <div class="wrap">
     <div id="header">
-      <h1><a href="login.html"><img src="images/logo.png" alt="SK HYNIX"></a></h1>
+      <h1><a href="index.html"><img src="images/logo.png" alt="SK HYNIX"></a></h1>
     
       <div class="nav">
         <ul class="gnb">
@@ -20,7 +20,7 @@
           <li><a href="applicant-list.html">Applicant</a></li>
         </ul>
         <ul class="lnb">
-          <li><a href="login.html">로그인</a></li>
+          <li><a href="index.html">로그인</a></li>
           <li><a href="join.html">회원가입</a></li>
         </ul>
       </div>
@@ -34,84 +34,155 @@
 
     <div id="container">
       <div class="contents career-info">
-        <h2>채용정보</h2>
-        <div class="search-box">
-          <select class="custom-select">
-            <option>기업별</option>
-            <option>하늘별</option>
-            <option>땅별</option>
-          </select>
-          <select class="custom-select center">
-            <option>공고상태</option>
-            <option>서류접수중</option>
-            <option>전형진행중</option>
-          </select>
-          <input type="text" class="search-input" placeholder="공고명">
-          <a href="#url" class="btn-search">검색</a>
+        <ul class="bread-crumb">
+          <li>HOME</li>
+          <li>Carrers</li>
+          <li>채용공고목록</li>
+        </ul>
+        <h2>채용 공고 목록</h2>
+        
+        <div class="sort-wrap">
+          <span class="left">총 100건</span>
+          <span class="right">
+            <select class="sort-select">
+              <option value="all" selected>전체 보기</option>
+              <option value="ing">채용 진행 중</option>
+              <option value="end">채용 종료</option>
+            </select>
+          </span>
         </div>
-  
         <div class="info-list">
           <table class="career-tbl">
-            <colgroup>
-              <col width="204px">
-              <col width="172px">
-              <col width="408px">
-              <col width="104px">
-              <col width="69px">
-              <col width="167px">
-            </colgroup>
+            <caption>채용 공고 목록</caption>
             <thead>
               <tr>
-                <th>공고기업(협력사)</th>
+                <th>채용 제목</th>
                 <th>공고일</th>
-                <th>공고명</th>
-                <th colspan="2">접수마감일</th>
-                <th>공고상태</th>
+                <th>마감일</th>
+                <th>지원자</th>
+                <th>서류 합격</th>
+                <th>서류 불합격</th>
+                <th>채용 대기</th>
+                <th>미 열람</th>
+                <th>상태</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>SK 하이닉스</td>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
                 <td>2018.12.05</td>
-                <td><a href="career-detail.html">[경력] ****** 모집</a></td>
-                <td>2018.12.05</td>
-                <td>D-20</td>
-                <td>
-                  <span class="state ready">서류접수중</span>
-                </td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="ing"><span class="state ing">채용 진행 중</span></td>
               </tr>
               <tr>
-                <td>SK 하이닉스</td>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
                 <td>2018.12.05</td>
-                <td><a href="career-detail.html">[경력] ****** 모집</a></td>
-                <td>2018.12.05</td>
-                <td>D-20</td>
-                <td>
-                  <span class="state ready">서류접수중</span>
-                </td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="ing"><span class="state ing">채용 진행 중</span></td>
               </tr>
               <tr>
-                <td>SK 하이닉스</td>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
                 <td>2018.12.05</td>
-                <td><a href="career-detail.html">[경력] ****** 모집</a></td>
-                <td>2018.12.05</td>
-                <td>D-20</td>
-                <td>
-                  <span class="state ready">서류접수중</span>
-                </td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="ing"><span class="state ing">채용 진행 중</span></td>
               </tr>
               <tr>
-                <td>SK 하이닉스</td>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
                 <td>2018.12.05</td>
-                <td><a href="career-detail.html">[경력] ****** 모집</a></td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="ing"><span class="state ing">채용 진행 중</span></td>
+              </tr>
+              <tr>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
                 <td>2018.12.05</td>
-                <td>D-20</td>
-                <td>
-                  <span class="state ing">전형진행중</span>
-                </td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="ing"><span class="state ing">채용 진행 중</span></td>
+              </tr>
+              <tr>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
+                <td>2018.12.05</td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="ing"><span class="state ing">채용 진행 중</span></td>
+              </tr>
+              <tr>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
+                <td>2018.12.05</td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="ing"><span class="state ing">채용 진행 중</span></td>
+              </tr>
+              <tr>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
+                <td>2018.12.05</td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="end"><span class="state end">채용 종료</span></td>
+              </tr>
+              <tr>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
+                <td>2018.12.05</td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="end"><span class="state end">채용 종료</span></td>
+              </tr>
+              <tr>
+                <td><a href="career-detail.html">[경력] 경영지원팀 - 재무,회계,기획 부분 모집</a></td>
+                <td>2018.12.05</td>
+                <td>2018.12.12</td>
+                <td>20</td>
+                <td>4</td>
+                <td>10</td>
+                <td>21</td>
+                <td>13</td>
+                <td class="status" data-status="end"><span class="state end">채용 종료</span></td>
               </tr>
             </tbody>
           </table>
+          <div class="btn-wrap">
+            <a href="career-apply.html">채용 공고 등록</a>
+          </div>
         </div>
   
         <ul class="page-navi">
@@ -127,7 +198,22 @@
         </ul>
       </div>
     </div>
-    
   </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.career-tbl tbody tr').addClass('active');
+      $('.sort-select').on('change', function() {
+        var val = $(this).val();
+        $('.career-tbl tbody tr').removeClass('active');
+        $("td[data-status="+ val +"]").closest('tr').addClass('active');
+
+        if (val === "all") {
+          $('.career-tbl tbody tr').addClass('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

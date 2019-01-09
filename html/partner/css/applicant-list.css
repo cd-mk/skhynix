@@ -15,59 +15,18 @@
   font-weight: 700;
   color: #353535;
 }
-.career-info .search-box {
+.sort-wrap {
   overflow: hidden;
-  margin-top: 18px;
-  border: 1px solid #dfdfdf;
-  box-sizing: border-box;
-  background: #f8f8f8;
-  padding: 24px 29px;
 }
-.search-box .custom-select {
-  float: left;
-  width: 344px;
-  height: 43px;
-  padding: 13px 13px 12px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 1px solid #ddd;
-  border-radius: 0;
-  box-sizing: border-box;
-  cursor: pointer;
-  color: #353535;
-  font-size: 16px;
+.sort-wrap .left {
+  margin-top: 25px;
   font-weight: 700;
-  background: #fff url(../images/ico-arr-down.png) no-repeat 307px center;
 }
-.search-box .custom-select.center {
-  border-right: 0;
-  border-left: 0;
+.sort-wrap .right {
+  float: right;
 }
-.search-box .search-input {
-  float: left;
-  width: 341px;
-  height: 43px;
-  padding: 13px 13px 12px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  color: #353535;
-  font-size: 16px;
-  font-weight: 700;
-  background: #fff;
-}
-.search-box .search-input::placeholder {
-  color: #353535;
-}
-.search-box .btn-search {
-  float: left;
-  width: 69px;
-  height: 43px;
-  line-height: 43px;
-  color: #fff;
-  font-size: 16px;
-  background: #202020;
-  text-align: center;
+.sort-wrap .right select {
+  width: 140px;
 }
 
 .info-list {
@@ -79,7 +38,6 @@
 }
 .info-list .career-tbl thead {
   border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
 }
 .info-list .career-tbl thead tr th {
   padding: 15px 13px;
@@ -93,8 +51,15 @@
 .info-list .career-tbl tbody tr {
   border-bottom: 1px solid #ddd;
 }
+.info-list .career-tbl tbody tr {
+  display: none;
+  border-bottom: 1px solid #ddd;
+}
+.info-list .career-tbl tbody tr.active {
+  display: table-row;
+}
 .info-list .career-tbl tr td {
-  padding: 17px 15px;
+  padding: 15px;
   font-size: 14px;
   font-weight: 700;
   color: #706f6f;
@@ -119,11 +84,25 @@
   color: #fff;
   font-size: 14px;
 }
-.info-list .career-tbl tr td .state.ready {
+.info-list .career-tbl tr td .state.ing {
   background: #f58025;
 }
-.info-list .career-tbl tr td .state.ing {
+.info-list .career-tbl tr td .state.end {
   background: #e31837;
+}
+.btn-wrap {
+  overflow: hidden;
+  margin-top: 15px;
+}
+.btn-wrap a {
+  float: right;
+  height: 43px;
+  line-height: 43px;
+  font-weight: 700;
+  color: #fff;
+  background: #202020;
+  padding: 0 15px;
+  text-align: center;
 }
 .page-navi {
   position: relative;

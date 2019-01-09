@@ -1,5 +1,6 @@
 @charset "utf-8";
 .career-detail .career-title {
+  overflow: hidden;
   position: relative;
   padding: 20px 22px;
   background: #3e3e3e;
