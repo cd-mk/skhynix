@@ -13,7 +13,7 @@
 <body>
   <div class="wrap">
     <div id="header">
-      <h1><a href="login.html"><img src="images/logo.png" alt="SK HYNIX"></a></h1>
+      <h1><a href="index.html"><img src="images/logo.png" alt="SK HYNIX"></a></h1>
     
       <div class="nav">
         <ul class="gnb">
@@ -21,7 +21,7 @@
           <li><a href="applicant-list.html">Applicant</a></li>
         </ul>
         <ul class="lnb">
-          <li><a href="login.html">로그인</a></li>
+          <li><a href="index.html">로그인</a></li>
           <li><a href="join.html">회원가입</a></li>
         </ul>
       </div>
@@ -37,12 +37,18 @@
 
     <div id="container">
       <div class="contents career-detail">
+        <ul class="bread-crumb">
+          <li>HOME</li>
+          <li>Careers</li>
+          <li>채용공고상세보기</li>
+        </ul>
         <h2>채용정보</h2>
         <div class="career-title">
           <h3>[경력] 경영지원팀 - 재무,회계,기획 부분 모집</h3>
           <p>
             공고기업 : SK하이닉스 공고상태 : 전형진행중
           </p>
+          <a href="#url" class="btn-applicant">지원자 <em>24</em>명 보기</a>
         </div>
         <div class="tbl-wrap">
           <table class="detail-tbl">
@@ -123,6 +129,101 @@
       </div>
     </div>
 
+    <div class="layer-popup">
+      <div class="popup-con">
+        <h3>지원자 보기</h3>
+        <table>
+          <caption>지원자 리스트</caption>
+          <thead>
+            <tr>
+              <th>이름</th>
+              <th>나이</th>
+              <th>지원일</th>
+              <th>심사상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김일력</a></td>
+              <td>31</td>
+              <td>2018.12.05</td>
+              <td class="pass">서류 합격</td>
+            </tr>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김이력</a></td>
+              <td>28</td>
+              <td>2018.12.07</td>
+              <td>채용 대기</td>
+            </tr>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김삼력</a></td>
+              <td>34</td>
+              <td>2018.12.07</td>
+              <td>서류 불합격</td>
+            </tr>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김사력</a></td>
+              <td>36</td>
+              <td>2018.12.08</td>
+              <td class="pass">서류 합격</td>
+            </tr>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김오력</a></td>
+              <td>31</td>
+              <td>2018.12.14</td>
+              <td>채용 대기</td>
+            </tr>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김육력</a></td>
+              <td>27</td>
+              <td>2018.12.22</td>
+              <td>채용 대기</td>
+            </tr>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김칠력</a></td>
+              <td>30</td>
+              <td>2018.12.23</td>
+              <td>채용 대기</td>
+            </tr>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김팔력</a></td>
+              <td>29</td>
+              <td>2018.12.29</td>
+              <td class="pass">서류 합격</td>
+            </tr>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김구력</a></td>
+              <td>31</td>
+              <td>2018.12.30</td>
+              <td>미열람</td>
+            </tr>
+            <tr>
+              <td><a href="resumeBuilder-read.html">김십력</a></td>
+              <td>31</td>
+              <td>2018.12.30</td>
+              <td>미열람</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="page-navi">
+          <li class="first"><a href="#url" class="arr">처음 페이지 가기</a></li>
+          <li class="prev"><a href="#url" class="arr">이전 페이지 가기</a></li>
+          <li class="on"><a href="#url">1</a></li>
+          <li><a href="#url">2</a></li>
+          <li><a href="#url">3</a></li>
+          <li><a href="#url">4</a></li>
+          <li><a href="#url">5</a></li>
+          <li class="next"><a href="#url" class="arr">다음 페이지 가기</a></li>
+          <li class="end"><a href="#url" class="arr">끝 페이지 가기</a></li>
+        </ul>
+        <a href="#url" class="btn-close">
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="dim"></div>
+    </div>
+
     <div id="footer">
       <div class="footer_area">
         <ul>
@@ -140,7 +241,16 @@
   </div>
   <script src="js/jquery.min.js"></script>
   <script src="js/common.js"></script>
-
+  <script>
+    $('.btn-applicant').on('click', function() {
+      $('body').css('overflow', 'hidden');
+      $('.layer-popup').show();
+    });
+    $('.btn-close').on('click', function() {
+      $('body').css('overflow', 'auto');
+      $('.layer-popup').hide();
+    });
+  </script>
 </body>
 
 </html>

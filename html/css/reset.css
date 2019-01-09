@@ -278,3 +278,24 @@ ul.alt li:first-child {
 
 span {display: inline-block;}
 .user-name {color: #f58025;}
+
+.contents {
+	position: relative;
+}
+.bread-crumb {
+	position: absolute;
+	right: 40px;
+	top: 50px;
+}
+.bread-crumb li {
+	float: left;
+	font-size: 13px;
+	color: #707070;
+}
+.bread-crumb li::before {
+	content: '>';
+	margin: 0 4px;
+}
+.bread-crumb li:first-child::before {
+	display: none;
+}
