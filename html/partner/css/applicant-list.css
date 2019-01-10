@@ -72,9 +72,6 @@
 .info-list .career-tbl tr td:last-child {
   border-right: 0;
 }
-.info-list .career-tbl tr td:nth-child(3) {
-  text-align: left;
-}
 .info-list .career-tbl tr td .state {
   display: inline-block;
   width: 99px;

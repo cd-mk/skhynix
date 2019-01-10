@@ -298,3 +298,12 @@ span {display: inline-block;}
 .bread-crumb li:first-child::before {
 	display: none;
 }
+input[type="text"]::-ms-clear {
+	display: none;
+}
+input[type="date"]::-ms-clear {
+	display: none;
+}
+select::-ms-expand {
+	display: none;
+}
